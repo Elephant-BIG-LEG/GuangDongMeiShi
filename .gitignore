@@ -1,0 +1,30 @@
+# 图片文件
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+
+# 视频文件
+*.mp4
+*.webm
+*.avi
+*.mov
+
+# 本地配置
+.env
+.env.local
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+.htaccess
+
+# 编辑器
+.vscode/
+.idea/
