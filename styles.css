@@ -39,6 +39,26 @@ body {
 }
 
 .header-inner { max-width: 800px; margin: 0 auto; }
+/* ========== 站点链接 ========== */
+.site-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--gold-primary);
+  text-decoration: none;
+  margin-bottom: 6px;
+  padding: 4px 12px;
+  border: 1px solid var(--gold-muted);
+  border-radius: 15px;
+  transition: var(--transition);
+  letter-spacing: 1px;
+}
+.site-link:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+  text-decoration: none;
+}
+
 
 .logo {
   display: flex;
