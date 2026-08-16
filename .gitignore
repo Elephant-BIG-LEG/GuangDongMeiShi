@@ -1,17 +1,3 @@
-# 图片文件
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.webp
-*.svg
-
-# 视频文件
-*.mp4
-*.webm
-*.avi
-*.mov
-
 # 本地配置
 .env
 .env.local
