@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>广东美食</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🍽️</span>
+        <h1>广东美食</h1>
+      </div>
+      <p class="tagline">匠心传承 · 地道粤味</p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <button class="nav-btn active" data-category="dishes">
+      <span class="nav-icon">🥢</span>
+      <span class="nav-text">招牌菜品</span>
+    </button>
+    <button class="nav-btn" data-category="environment">
+      <span class="nav-icon">🏮</span>
+      <span class="nav-text">环境雅座</span>
+    </button>
+    <button class="nav-btn" data-category="videos">
+      <span class="nav-icon">🎬</span>
+      <span class="nav-text">视频展示</span>
+    </button>
+  </nav>
+
+  <main class="main">
+    <section id="dishes" class="content-section active">
+      <div class="section-header">
+        <h2>招牌菜品</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/dishes/dish1.jpg" alt="广东美食" loading="lazy">
+          <div class="item-overlay"><span class="item-name">经典粤菜</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/dishes/dish2.jpg" alt="广东美食" loading="lazy">
+          <div class="item-overlay"><span class="item-name">精致点心</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/dishes/dish3.jpg" alt="广东美食" loading="lazy">
+          <div class="item-overlay"><span class="item-name">烧腊双拼</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/dishes/dish4.jpg" alt="广东美食" loading="lazy">
+          <div class="item-overlay"><span class="item-name">清蒸海鲜</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/dishes/dish5.jpg" alt="广东美食" loading="lazy">
+          <div class="item-overlay"><span class="item-name">广东老火靓汤</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/dishes/dish6.jpg" alt="广东美食" loading="lazy">
+          <div class="item-overlay"><span class="item-name">广式炒饭</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="environment" class="content-section">
+      <div class="section-header">
+        <h2>环境雅座</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/environment/room1.jpg" alt="餐厅环境" loading="lazy">
+          <div class="item-overlay"><span class="item-name">大厅雅座</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/environment/room2.jpg" alt="餐厅环境" loading="lazy">
+          <div class="item-overlay"><span class="item-name">豪华包间</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/environment/room3.jpg" alt="餐厅环境" loading="lazy">
+          <div class="item-overlay"><span class="item-name">茶室清幽</span></div>
+        </div>
+        <div class="gallery-item" data-type="image">
+          <img src="assets/images/environment/room4.jpg" alt="餐厅环境" loading="lazy">
+          <div class="item-overlay"><span class="item-name">园林景致</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="content-section">
+      <div class="section-header">
+        <h2>视频展示</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="video-grid">
+        <div class="video-item">
+          <video controls preload="metadata" poster="assets/videos/poster1.jpg">
+            <source src="assets/videos/video1.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+          </video>
+          <p class="video-title">后厨风采</p>
+        </div>
+        <div class="video-item">
+          <video controls preload="metadata" poster="assets/videos/poster2.jpg">
+            <source src="assets/videos/video2.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+          </video>
+          <p class="video-title">食材故事</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 广东美食 · 匠心传承</p>
+  </footer>
+
+  <div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
