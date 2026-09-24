@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 视频懒加载
+  // 视频懒加载和播放控制
   const videos = document.querySelectorAll('.video-item video');
   videos.forEach(video => {
     const videoItem = video.parentElement;
@@ -44,6 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (video.readyState === 0) {
         video.load();
       }
+    });
+
+    // 视频播放时暂停其他视频
+    video.addEventListener('play', () => {
+      videos.forEach(v => {
+        if (v !== video) v.pause();
+      });
     });
   });
 
@@ -102,16 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('show');
     document.body.style.overflow = '';
   }
-
-  // 视频播放时暂停其他视频
-  const videos = document.querySelectorAll('video');
-  videos.forEach(video => {
-    video.addEventListener('play', () => {
-      videos.forEach(v => {
-        if (v !== video) v.pause();
-      });
-    });
-  });
 
   // 触摸滑动切换分类
   let touchStartX = 0;
