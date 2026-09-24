@@ -21,6 +21,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 视频懒加载
+  const videos = document.querySelectorAll('.video-item video');
+  videos.forEach(video => {
+    const videoItem = video.parentElement;
+
+    // 视频加载完成后移除加载提示
+    video.addEventListener('loadeddata', () => {
+      videoItem.classList.add('video-loaded');
+    });
+
+    // 点击播放时才加载视频
+    video.addEventListener('click', () => {
+      if (video.readyState === 0) {
+        video.load();
+      }
+    });
+
+    // 鼠标悬停时预加载视频
+    videoItem.addEventListener('mouseenter', () => {
+      if (video.readyState === 0) {
+        video.load();
+      }
+    });
+  });
+
   // 分类切换
   navBtns.forEach(btn => {
     btn.addEventListener('click', () => {
