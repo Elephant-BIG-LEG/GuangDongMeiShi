@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImg');
   const modalClose = document.querySelector('.modal-close');
+  const backToTopBtn = document.getElementById('backToTop');
 
   // 图片加载状态处理
   const galleryImages = document.querySelectorAll('.gallery-item img');
@@ -43,6 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (video.readyState === 0) {
         video.load();
       }
+    });
+  });
+
+  // 回到顶部按钮
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 
