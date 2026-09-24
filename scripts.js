@@ -6,6 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalImg = document.getElementById('modalImg');
   const modalClose = document.querySelector('.modal-close');
 
+  // 图片加载状态处理
+  const galleryImages = document.querySelectorAll('.gallery-item img');
+  galleryImages.forEach(img => {
+    img.addEventListener('load', () => {
+      img.classList.add('loaded');
+      img.parentElement.classList.add('img-loaded');
+    });
+
+    // 如果图片已经加载完成
+    if (img.complete) {
+      img.classList.add('loaded');
+      img.parentElement.classList.add('img-loaded');
+    }
+  });
+
   // 分类切换
   navBtns.forEach(btn => {
     btn.addEventListener('click', () => {
