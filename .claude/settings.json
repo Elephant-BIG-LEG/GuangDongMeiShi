@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m '深度优化：WebP格式 + 更小尺寸 *)",
+      "Bash(python optimize_environment.py)",
+      "Bash(git commit -m '菜品分类 + 环境图片优化 *)",
+      "Bash(git commit -m '视频加载优化 *)",
+      "Bash(python optimize_new_dishes.py)",
+      "Bash(git commit -m '新增6个菜品并优化 *)",
+      "Bash(cd \"d:\\\\GuangDongMeiShi\" && rm -f assets/images/dishes/*.jpg assets/images/dishes/*.png && echo \"已删除菜品原始图片\")",
+      "Bash(cd \"d:\\\\GuangDongMeiShi\" && rm -f assets/images/environment/*.jpg && echo \"已删除环境原始图片\")"
+    ],
+    "additionalDirectories": [
+      "D:\\GuangDongMeiShi\\assets\\images\\dishes",
+      "D:\\GuangDongMeiShi\\assets\\images\\environment"
+    ]
+  }
+}
