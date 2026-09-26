@@ -23,10 +23,13 @@
   <meta name="apple-mobile-web-app-title" content="广东美食">
 
   <title>广东美食-十里河店 | 正宗粤菜</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- 预加载关键资源 -->
+  <link rel="preload" href="styles.min.css" as="style">
+  <link rel="preload" href="scripts.min.js" as="script">
+  <link rel="preload" href="assets/images/dishes/optimized/深井烧鸭.webp" as="image">
+
+  <link rel="stylesheet" href="styles.min.css">
 </head>
 <body>
   <header class="header">
@@ -73,7 +76,7 @@
         <div class="gallery-grid">
           <div class="gallery-item" data-type="image">
             <img src="assets/images/dishes/optimized/深井烧鸭.webp" alt="广东美食" loading="lazy">
-            <div class="item-name">深井烧鸭</div>
+            <div class="item-name">深井烧鹅</div>
           </div>
           <div class="gallery-item" data-type="image">
             <img src="assets/images/dishes/optimized/卤水拼盘.webp" alt="广东美食" loading="lazy">
@@ -363,6 +366,6 @@
     <img class="modal-content" id="modalImg">
   </div>
 
-  <script src="scripts.js"></script>
+  <script src="scripts.min.js"></script>
 </body>
 </html>
